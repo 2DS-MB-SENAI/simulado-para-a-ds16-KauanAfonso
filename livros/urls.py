@@ -3,5 +3,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('read/', views.read , name="read" )
+    path('templates/', views.read , name="read" )
 ]

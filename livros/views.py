@@ -8,4 +8,4 @@ def read(request):
     except Exception as e:
         return render({f'erro': "{e}"})
     
-    return render(request, "index.html",  {'livros': livro})
+    return render(request, "livros.html",  {'livros': livro})

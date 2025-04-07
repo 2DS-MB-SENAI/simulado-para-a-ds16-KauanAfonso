@@ -36,9 +36,9 @@ def logar(request):
     if request.method == 'POST':
         username = request.data.get('username')
         password = request.data.get('password')    
-        telefone = request.data.get('telefone')
 
-        usuario = authenticate(username=username, password=password, telefone=telefone)
+
+        usuario = authenticate(username=username, password=password)
         if usuario:
             refresh = RefreshToken.for_user(usuario)
             return Response({"Token": str(refresh.access_token), "Refresh":str(refresh)}, status=status.HTTP_200_OK)

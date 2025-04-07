@@ -3,7 +3,7 @@ from .models import Livro
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import status
-from .serializer import LivroSerializer
+from .serializers import LivroSerializer
 # Create your views here.
 
 def Listar_Livros(request):

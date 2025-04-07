@@ -4,5 +4,6 @@ from . import views
 
 urlpatterns = [
     path('templates/', views.Listar_Livros , name="Listar_Livros" ),
-    path('api/livros', views.Listar_Livros_API)
+    path('/livros/', views.Listar_Livros_API),
+
 ]

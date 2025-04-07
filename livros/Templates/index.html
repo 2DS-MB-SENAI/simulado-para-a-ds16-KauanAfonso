@@ -1,0 +1,14 @@
+<h2>Livros</h2>
+
+
+<ul>
+
+
+{% for livro in livros%}
+    <li>Titulo: {{livro.titulo}}</li>
+    <li>Autor: {{livro.autor}}</li>
+    <li>Páginas: {{livro.paginas}}</li>
+{% endfor %}
+
+
+</ul>

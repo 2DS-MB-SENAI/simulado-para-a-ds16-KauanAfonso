@@ -13,8 +13,9 @@ def criar_usuario(request):
 
     username = request.data.get('username')
     password = request.data.get('password')
+    telefone = request.data.get('telefone')
 
-    if not username or not password:
+    if not username or not password or not telefone:
         return Response({"Erro":"Dados enviados incorretamente"}, status=status.HTTP_400_BAD_REQUEST)
     
     if Usuario.objects.filter(username=username).exists():
@@ -22,7 +23,8 @@ def criar_usuario(request):
     
     user = Usuario.objects.create_user(
         username=username,
-        password=password
+        password=password,
+        telefone=telefone,
     )
 
     return Response({"usuário criado com sucesso": username}, status=status.HTTP_201_CREATED)
